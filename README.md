@@ -5,3 +5,6 @@ Um Projeto voltado para a loja do meu tio André. Pensado em conjunto ao meu fie
 As imagens são ficticias e só servem de exemplo. O projeto foi desenvolvido com a intenção de ir ao ar oficialmente, porém as circunstâncias não colaboraram.
 
 As seções de roupas não são páginas separadas, mas sim filtros.
+
+Link da página
+https://yancarloscamargo.github.io/The-Brodis-Site/
