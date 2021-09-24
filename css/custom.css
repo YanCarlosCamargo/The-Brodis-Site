@@ -1,0 +1,1759 @@
+/* General ============================  */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background: #1e2127;
+
+}
+
+.container-main {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  opacity: 1; 
+}
+
+/* Navbar ============================  */
+
+.navbar {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Dealerplate;
+  letter-spacing: .2em;
+  text-align: center;
+
+  -webkit-box-shadow: 0px 81px 52px -17px rgba(0,0,0,0.41);
+  -moz-box-shadow: 0px 81px 52px -17px rgba(0,0,0,0.41);
+  box-shadow: 0px 81px 52px -17px rgba(0,0,0,0.41);
+}
+
+#navegacao{
+  width: 80%;
+  margin-left:10%;
+  margin-right: 10%;
+}
+
+#selecao-nav{
+  height: 3px;
+  width: 100%;
+ background-color:rgb(32, 32, 32) ;
+}
+
+.nav-item{
+  align-items: center;
+}
+
+#nav-item:hover {
+
+  
+animation: subir-blur 500ms;
+  -webkit-box-shadow: inset 0px -73px 24px -70px #0d44ce9e;
+  -moz-box-shadow: inset 0px -73px 24px -70px rgba(41,101,255,0.62);
+  box-shadow: inset 0px -73px 24px -70px rgba(41,101,255,0.62);
+}
+
+.nav-item:hover #selecao-nav {
+  
+  animation: encher-selecao .5s;
+  height: 3px;
+  width: 100%;
+ background-color:rgb(41,101,255) ;
+}
+
+/* Grid ============================  */
+
+/*.container {
+  display: grid;
+  width: 50vw;
+  height: 30vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  grid-template-areas:
+      "roupas cosmeticos acessorios"
+      "roupas bebes acessorios"
+      "roupas criancas acessorios";
+
+  text-decoration: none;    
+} */
+
+/* .container {
+  display: grid;
+  width: 95vw;
+  height: 20vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: .1rem;
+  grid-template-areas:
+      "roupas cosmeticos acessorios"
+      "roupas bebes acessorios"
+      "roupas criancas acessorios";
+
+  text-decoration: none;  
+  
+}  */
+
+.container {
+  font-family: "poppins", sans-serif;
+
+  display: grid;
+  width: 100vw;
+  height: 90vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  grid-template-areas:
+      "roupas cosmeticos acessorios"
+      "roupas bebes acessorios"
+      "roupas criancas acessorios";
+}
+
+.sidebar {
+  grid-area: roupas;
+}
+
+.content-1 {
+  grid-area: cosmeticos;
+}
+
+.content-2 {
+  grid-area: bebes;
+}
+
+.content-3 {
+  grid-area: criancas;
+}
+
+.sidebar-2 {
+  grid-area: acessorios;
+}
+
+.item {
+  background-color: #1EAAFC;
+  background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  color: #ffffff;
+  border-radius: 4px;
+  border: 6px solid #171717;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.sidebar {
+  background: url('../img/clothes.jpg');
+}
+
+.content-1 {
+  background: url('../img/cosmetic.jpg');
+}
+
+.content-2 {
+  background: url('../img/babys.jpg');
+}
+
+.content-3 {
+  background: url('../img/childs.jpg');
+}
+
+.sidebar-2 {
+  width: 100%;
+  background: url('../img/acessory.jpg')no-repeat;
+}
+
+.apresentacao {
+  font-size: 2rem;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  visibility: none;
+
+  transition: .3s;
+}
+
+.apresentacao:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+
+  visibility: visible;
+  opacity: 1;
+}
+
+
+@font-face {
+	font-family: Dealerplate;
+	src: url(../fonts/dealerplate-california.ttf);
+}
+
+#blur-selecao, .selecionado{
+
+  -webkit-box-shadow: inset 0px -73px 24px -70px rgba(41,101,255,0.62);
+  -moz-box-shadow: inset 0px -73px 24px -70px rgba(41,101,255,0.62);
+  box-shadow: inset 0px -73px 24px -70px rgba(41,101,255,0.62);
+}
+
+@keyframes subir-blur {
+
+
+0%{
+  -webkit-box-shadow: inset 0px 0px 0px 0px rgba(41,101,255,0.62);
+  -moz-box-shadow: inset 0px 0px 0px 0px rgba(41,101,255,0.62);
+  box-shadow: inset 0px 0px 0px 0px rgba(41,101,255,0.62);
+
+}
+
+100%{
+  -webkit-box-shadow: inset 0px -73px 24px -70px rgba(41,101,255,0.62);
+  -moz-box-shadow: inset 0px -73px 24px -70px rgba(41,101,255,0.62);
+  box-shadow: inset 0px -73px 24px -70px rgba(41,101,255,0.62);
+}
+
+}
+
+@keyframes encher-selecao {
+
+0% { width: 50%; margin-left: 25%;}
+100% { width: 100%; margin-left: 0%; }
+
+}
+
+.redes-sociais-insta {
+    margin-right: 1rem;
+    margin-top: 4%;
+}
+.redes-sociais {
+  margin-right: 1rem;
+}
+
+
+
+
+.cards {
+    margin: 0 auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    padding: 0;
+
+ 
+}
+
+
+  /* OTHER STYLES */
+
+#novidade-do-mês{
+  width: 100%;
+  background-color: #e3e9fa;
+  align-items: center;
+  padding: 5% 0%;
+  display: flex;
+}
+#texto-novidade{
+  width: 40%;
+  margin: 0% 5%;
+
+}
+
+#texto-novidade p{
+text-align: right;
+  font-size: 6em;
+
+  text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+  font-weight: 900;
+  font-family: Dealerplate;
+  text-decoration: double;
+}
+#imagem-novidade{
+  width:40%;
+  display: inline-block;
+  
+}
+#novidade-do-mês img{
+float: right;
+  width: 90%;
+  
+}
+
+#frase-novidade{
+  font-size: 3em; 
+  text-shadow: none; 
+  font-weight: 100; 
+  font-family: colorado;
+float: right;
+
+text-decoration: none;
+}
+
+#frase-novidade:hover{
+  font-size: 3em; 
+  text-shadow: none; 
+  font-weight: 100; 
+  font-family: colorado;
+float: right;
+color: black;
+text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+  /* Aqui Começa a estilização do *CARRINHO DE COMPRAS*
+
+Tome cuidado para que divs do seu index e css não entrem em conflito, 
+quebrando assim o estilo e até o funcionanmento do JS e funcionamento do código. */
+
+
+
+
+
+
+/* Aqui é a configuração do pop-up do carrinho. */
+.pop{
+  background-color: #e0e0e0;
+  width: 60%;
+
+height: 75%;
+
+margin-left: 20%;
+ top: 10%;
+
+  animation: descer2 2000ms;
+  display: none;
+  
+  text-align: center;
+    
+  color: white;
+
+  font-family: 'Roboto Condensado', sans-serif;
+  
+  border-radius: 20px;
+
+
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+ border-width: 10%;
+ border-color: lawngreen;
+
+}
+
+
+
+
+/* Por aqui rola a configuração de tudo que vai DENTRO do carrinho/Pop-Up  */
+#carrinho{
+
+  align-items: center;
+  justify-content: center;
+ width: 100%;
+ height: 100%;
+
+
+
+
+
+}
+
+
+/*Barra de Rolagem personalizada*/
+
+#produtos-carrinho::-webkit-scrollbar
+{width: 10px; height: 10px;}
+#produtos-carrinho::-webkit-scrollbar-track-piece
+{background-color: #ffffff00; -webkit-border-radius: 50px; border-radius: 50px;} 
+#produtos-carrinho::-webkit-scrollbar-thumb:vertical
+{height: 6px; background-color: #c0ff13; -webkit-border-radius: 50px; border-radius: 50px;}
+#produtos-carrinho::-webkit-scrollbar-thumb:horizontal
+{width: 6px; background-color: #000000; -webkit-border-radius: 50px; border-radius: 50px;}
+
+
+
+#titulo-carrinho h1 {
+  text-align: center;
+
+  align-self: center;
+  width: 30%;
+  margin-left: 35%;
+margin-top: 2.5%;
+ margin-bottom: 2%;
+  background-color: black;
+  border-radius: 10px;
+  font-size: 175%;
+
+  
+  
+  
+}
+#btnFechar {
+  margin-top: 1rem;
+  border: none;
+  background-color: transparent;
+  color: #000000;
+  transition: .5s;
+  font-size: 1.2rem;
+  float: right;
+  margin-right: 1.5rem;
+  z-index: 999;
+}
+
+#btnFechar:hover {
+color: #a3a3a3;
+transition: .2s;  
+}
+
+
+
+#produtos-carrinho {
+  /*  esta parte é importante pois ela posiciona os produtos dentro do carrinho. */
+
+  overflow: auto;
+  
+  height: 60%;
+margin: 0 auto;
+position: static;
+width: 100%;
+border-radius: 15px;
+text-align: justify;
+align-items:justify ;
+display: inline-block;
+
+
+}
+
+#produtos-carrinho h3 {
+  /**/
+margin-top: 10%;
+  margin-left: 35%;
+  font-size: 1.5em;
+ 
+}
+
+
+
+/* Aqui é feita disposição dos titulos/legendas de dentro do carrinho */
+
+#legendas-carrinho {
+
+  width: 100%;
+  display: inline-flex;
+  font-weight:400;
+  color: black;
+}
+
+
+
+#legenda-nome-do-produto-carrinho {
+ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  width: 50%;
+  text-align: left;
+  margin-left: 10%;
+  
+}
+
+
+#legenda-quantidade-do-produto-carrinho {
+    width: 50%;
+    text-align: right;
+      margin-right: 15%;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+#listagem-de-produtos{
+  padding-top: 1%;
+  padding-bottom: 4%;
+  background-color: rgb(233, 233, 233);
+margin-top: 2.5%;
+margin-bottom: 2.5%;
+  height: 20%;
+  width:80%;
+  margin-left: 10%;
+  border-radius: 10px;
+  
+}
+
+  
+
+#nome-produto-carrinho {
+  /* Aqui voce planeja a Badge que exibe o numero total de um determinado produto. */
+margin-top: 2%;
+color: #000000;
+float: left;
+   margin-left: 5%;
+   font-style: italic;    
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-weight: 100;
+font-size: 1.2em;
+
+   background-color: rgba(39, 39, 39, 0);
+
+  }
+
+  #botao-regulagem{
+margin-top: -20%;
+  width:23px;
+   height: 23px
+  }
+
+#sub-quant-adc {
+  /* Aqui é organizado os botões de subtração e adição junto com a quantidade especifica de um produto. */
+margin-top: 0.3%;
+ float: right;
+ margin-right: 5%;
+
+ border: solid;
+        border-width: 1px;
+        padding: 5px;
+  background-color: rgb(219, 219, 219);
+
+}
+
+
+#btn-sub {
+  /* Aqui voce poderá estilizar o botão de subtração de items do carrinho */
+  display: inline;
+  width: 20px;
+  height: 20px;
+}
+
+
+#quantidade-produto-carrinho {
+
+  display: inline;
+ font-size: 1.3em;
+
+}
+
+#btn-adc2 {
+ /* Aqui voce poderá estilizar o botão de adição de items do carrinho */
+ display: inline;
+ 
+}
+
+
+
+/* Este botão é relacionado ao botão de Adicionar ao carrinho */
+#btn-adc {
+  top: 100%;
+}
+
+
+
+
+#resumo {
+  /* Isso aqui Condiz a área total do resumo dos produtos e sua disposição */
+margin-top: 5%;
+  width: 100%;
+display: flex;
+bottom: 100%;
+}
+
+
+
+
+#total-de-produtos-p{
+  /* texto: TOTAL DE PRODUTOS */
+  width: 30%;
+  float: left;
+  font-weight: bold;
+  text-align: right;
+  color: #000000;
+  
+
+  margin-top: 1%;
+}
+
+#total-de-produtos {
+  /* Aqui se refere ao Badge que informa o numero de itens no total dentro do carrinho. */ 
+  width: 10%;
+
+      font-size: 1.5em;      
+  }
+
+
+#preco-final-carrinho {
+   /* Badge que cuida do preço final do carrinho. */
+   width: 70%;
+   float: right;  
+   height: 100%;
+ 
+   font-size: 1.5em;
+
+}   
+
+/* aqui termina a parte de legendas do Carrinho */
+
+
+
+
+
+#detalhes-do-produto{
+  width: 100%;
+  height: 100%;
+  
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.466);
+  z-index: 999;
+}
+
+#ctd-detalhes{
+  margin-left: 20%;
+  margin-top: 10%;
+
+  width: 60%;
+  height: 60%;
+ 
+  border-radius: 5px;
+
+  padding: .5rem;
+  border-color: #ececec;
+  background-color:#ececec;
+
+}
+
+#carrousel-detalhes-produto{
+  width: 50%;
+ height: 100%;
+  float: left;
+  background-color: rgb(255, 255, 255);
+  
+}
+#descricao-produto-detalhes{
+  width: 50%;
+float: right;
+height: 100%;
+background-color: rgb(255, 255, 255);
+}
+
+
+#btn-fechar-detalhes{
+  float: right;
+  margin-left: 27% ;
+  position:absolute; 
+  z-index: 99999999;
+}
+
+/* Algumas animações. */
+@keyframes clarear {
+  0% {filter: opacity(0);}
+  
+  100% {filter: opacity(1);}
+}
+@keyframes desaparecer {
+  0% {filter: opacity(1);}
+  50% {filter:opacity(0.6)}
+  100% {filter: opacity(0.1);}
+}
+@keyframes desaparecer2 {
+  0% {filter: opacity(1);}
+  50% {filter:opacity(0.6)}
+  100% {filter: opacity(0.3);}
+}
+@keyframes descer {
+  0% {
+      transform: translateY(-120px);
+  } 50% {transform: translateY(4px); }
+  100% {
+      transform: translateY(0px);
+}
+}
+
+@keyframes descer2 {
+  0% {
+      transform: translateY(-400px);
+  } 40% {transform: translateY(30px); }
+  100% {
+      transform: translateY(0px);}
+}
+
+@keyframes subir {
+  0% {
+      transform: translateY(0px);
+  } 40% {transform: translateY(30px); }
+  100% {
+      transform: translateY(-400px); }
+   
+     
+}
+
+
+
+#tabela, #tabela-Roupas,#tabela-acessorios, #tabela-cosmeticos, #tabela-bebe, #tabela-crianca
+{
+margin-left: 10%;
+width: 80%;
+padding-bottom: 5%;
+background-color: linear-gradient(0deg, rgba(48,48,48,1) 32%, rgb(87, 87, 87) 100%); ;
+border-radius: 15px;
+}
+
+
+.card-img-top{
+  transition:.2s;
+}
+
+.card-img-top:hover
+{
+  animation: grow .2s linear;
+  -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    border-radius: 10px;
+}
+
+ @keyframes grow {
+   0% {  -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    border-radius: 0px;
+  }
+   100% {  -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    border-radius: 10px;
+  }
+ }
+
+ @keyframes growinverso {
+  0% { 
+
+   -webkit-transform: scale(1.1);
+   -ms-transform: scale(1.1);
+   transform: scale(1.1);
+   border-radius: 10px;
+ }
+  100% { 
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    border-radius: 0px;
+ }
+}
+
+
+#card-produtos
+{
+ 
+  border-width: 4px;
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: 0px 0px 18px 5px rgba(0,0,0,0.38); 
+  box-shadow: 0px 0px 18px 5px rgba(31, 0, 88, 0.171);
+}
+
+
+.card-title{
+ 
+  font-family: colorado;
+  font-size: 3em;
+}
+
+
+
+#preco-txt{
+  width: 100% ;
+  
+  margin-bottom: 100%;
+  margin: 0 auto;
+  font-size: 2em;
+  text-align: center;
+}
+
+#btn-preco-txt{
+  width: 100% ;
+padding: 0% .1%;
+  margin: 0 auto;
+  font-size: 1.5em;
+  font-family: 'Red Rose', cursive;
+}
+
+#btn-preco{
+  width: 100%;
+
+
+}
+
+
+#vitrine-geral, #vitrine-geral-roupas , #vitrine-geral-crianca, #vitrine-geral-acessorios, #vitrine-geral-bebe, #vitrine-geral-cosmeticos{
+  background: rgb(48,48,48);
+  background: linear-gradient(0deg, rgba(48,48,48,1) 32%, rgba(13,13,13,1) 100%); 
+  width: 100%;
+}
+
+#vitrine-geral h2, #vitrine-geral-roupas h2, #vitrine-geral-crianca h2, #vitrine-geral-acessorios h2, #vitrine-geral-bebe h2,  #vitrine-geral-cosmeticos h2{
+  color: #e9e9e9;
+  font-size: 5em;
+  text-align: center;
+ margin: 0 auto;
+max-width: 50%;
+  margin-top: 5%;
+
+  margin-bottom: 7%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background-color: #138dff00;
+  border-radius: 2px;
+  font-family: Dealerplate;
+  border-width: 5px;
+border-color: linear-gradient(90deg, rgba(251,251,251,1) 0%, rgba(184,184,184,1) 50%, rgba(255,255,255,1) 100%);;
+border-style: solid;
+}
+
+
+
+#vitrine-geral-bebe.img{
+
+margin-right: 7%;
+
+}
+
+.card-text{
+  font-family: 'Fira Code', monospace;
+  font-size: 1.2em;
+
+}
+
+.card-footer{
+
+}
+
+
+@font-face {
+	font-family: colorado;
+	src: url(../fonts/colorado.ttf);
+}
+
+
+#badge-total-carrinho {
+font-size: 75%;
+  background-color:rgb(255, 188, 44); 
+  border:none; 
+ color: #1e2127;
+ 
+ padding-left: 20px;
+ padding-right: 20px;
+ padding-top: 1px;
+ padding-bottom: 1px;
+  border-radius: 5px;
+  margin: 1% 5%;
+  float:left
+
+}
+
+ 
+
+
+
+
+#botão-movel-carrinho{
+  position: fixed;
+
+  z-index: 1000;
+  background-color: #dddddd;
+  padding: 15px;
+  margin-top: 30%;
+  margin-left: 20%;
+  border-width: 3px;
+  border-color: rgb(0, 140, 255);
+  border-radius: 100%;
+  border-style: solid;
+}
+
+#botão-movel-carrinho:hover{
+  position: fixed;
+  z-index: 1000;
+  background-color: #cccccc;
+  padding: 15px;
+  margin-top: 30%;
+  margin-left: 20%;
+  border-width: 3px; 
+  border-color: rgb(29, 121, 197);
+  border-radius: 100%;
+  border-style: solid;
+}
+
+
+
+#button {
+  min-width: 300px;
+  min-height: 60px;
+  width: 100%;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: #4FD1C5;
+  background: linear-gradient(
+90deg
+, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgb(79 209 197 / 64%);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  padding: 10px;
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+
+#button p{
+  font-family: 'Nunito', sans-serif;
+  margin: 0 auto;
+  color: #313133;
+}
+
+#button::before {
+  content: '';
+    border-radius: 1000px;
+  
+    min-width: calc(100% + 20px);
+    min-height: calc(100% + 20px);;
+  
+    border: 6px solid #00FFCB;
+    box-shadow: 0 0 60px rgba(0,255,203,.64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: -1;
+   
+  }
+  
+  #button:hover, #button:focus {
+    color: #313133;
+    transform: translateY(-6px);
+  }
+  
+  #button:hover::before, #button:focus::before {
+    opacity: 1;
+  }
+  
+
+  
+  #button:hover::after, #button:focus::after {
+    animation: none;
+    display: none;
+  }
+  
+  
+
+
+.first {
+  -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+.first:hover {
+  box-shadow: 0 0 40px 40px #3c94e7 inset;
+}
+
+
+
+
+#ctd {
+  padding-top: 10%;
+  padding-bottom: 10%;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  background-color: rgb(212, 212, 212);
+}
+
+#ctd img {
+  height: 20%;
+  width: 20%;
+  margin-left: 15%;
+ display: inline;
+}
+#ctd p {
+  margin-top: 2%;
+  width: 40%;
+ float: right;
+ margin-left: 7%;
+ font-family: Dealerplate;
+ font-size: 2em;
+ letter-spacing: .05em;
+ text-align: justify;
+ color: rgb(41, 41, 41);
+ display: inline;
+}
+
+
+#div-ctd{
+  width: 2px; 
+  height: 280px; 
+  background-color: rgb(85, 85, 85); 
+  margin-top: 2%; 
+  
+  margin-left: 8%;
+}
+
+@media only screen and (max-width: 480px) {
+
+  #card-produtos {
+    border-width: 4px;
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .pop{
+    background-color: #e0e0e0;
+    width: 95%;
+  
+  height: 60%;
+  
+  
+   top: 10%;
+  
+    animation: descer2 2000ms;
+    display: none;
+    
+    text-align: center;
+      
+
+  
+    font-family: 'Roboto Condensado', sans-serif;
+    position: fixed;
+    border-radius: 20px;
+  
+  
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+   border-width: 10%;
+   border-color: lawngreen;
+  
+  }
+  
+  .redes-sociais-insta {
+    margin-right: 1rem;
+    margin-bottom: -10%;
+}
+  .redes-sociais {
+    margin-right: 1rem;
+}
+  .card-title{
+   
+    font-family: colorado;
+    font-size: 2.5em;
+  }
+
+
+  #btn-preco{
+    width: 100%;
+font-size: .8em;
+margin: 0 auto;
+    background-image: linear-gradient(203deg, #3EDFD7 0%, #29A49D 90%);
+    border: none;
+    font-family: 'Red Rose', cursive;
+    
+  }
+
+  #btn-preco-txt{
+    width: 100%;
+margin: 0 auto;
+    font-size: 1.3em;
+  }
+
+  .card-text{
+    font-family: 'Fira Code', monospace;
+  font-size: 1.0em;
+  
+  }
+
+
+  #badge-total-carrinho {
+    font-size: 75%;
+      background-color:rgb(255, 188, 44); 
+      border:none; 
+     color: #1e2127;
+      max-width: 100%;
+     padding-left: 20px;
+     padding-right: 20px;
+     padding-top: 1px;
+     padding-bottom: 1px;
+      border-radius: 5px
+    }
+
+    #listagem-de-produtos{
+      padding-top: 1%;
+      
+      background-color: rgb(233, 233, 233);
+    
+      height: 20%;
+      width:90%;
+      margin-left: 5%;
+      border-radius: 5%;
+      
+    }
+
+
+    #nome-produto-carrinho {
+      /* Aqui voce planeja a Badge que exibe o numero total de um determinado produto. */
+          float: left;
+       margin-left: 7%;
+       color: #000000;
+       font-style: italic;    
+       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: -0.6% ;
+    font-size: 1em;
+    height: 15%;
+      width: 42%;
+      }
+      #sub-quant-adc {
+        /* Aqui é organizado os botões de subtração e adição junto com a quantidade especifica de um produto. */
+        border: solid;
+        border-width: 1px;
+        padding: 5px;
+       float: right;
+       margin-right: 5%;
+      margin-top: 1.5%;
+      
+  
+      
+      
+     
+      
+            
+       background-color: rgb(219, 219, 219);
+     
+      
+      }
+
+      #botao-regulagem{
+        margin-top: -100%;
+      width:15px;
+       height: 15px
+      }
+
+      #btn-sub {
+        /* Aqui voce poderá estilizar o botão de subtração de items do carrinho */
+        display: inline;
+       
+      }
+      
+      
+      #quantidade-produto-carrinho {
+      margin-top: -100%;
+        display: inline;
+       font-size: 1.3em;
+      
+      }
+      
+      #btn-adc2 {
+       /* Aqui voce poderá estilizar o botão de adição de items do carrinho */
+       display: inline;
+       
+      }
+      
+      
+      #btn-finalizar-compra{
+        margin-top:20%;
+        float: right;
+       
+        
+      }
+
+
+      #botão-movel-carrinho{
+        position: fixed;
+        
+        z-index: 1000;
+        background-color: #dddddd;
+        padding: 15px;
+        margin-top: 100%;
+        margin-right: 50%;
+        border-width: 3px;
+        border-color: rgb(0, 140, 255);
+        border-radius: 100%;
+        border-style: solid;
+      }
+      
+      #botão-movel-carrinho:hover{
+        position: fixed;
+        z-index: 1000;
+        background-color: #cccccc;
+        padding: 15px;
+        margin-top: 100%;
+      
+        
+        border-color: rgb(29, 121, 197);
+        border-radius: 100%;
+      }
+      
+      #vitrine-geral, #vitrine-geral-roupas , #vitrine-geral-crianca, #vitrine-geral-acessorios, #vitrine-geral-bebe, #vitrine-geral-cosmeticos{
+        background: rgb(48,48,48);
+        background: linear-gradient(0deg, rgba(48,48,48,1) 32%, rgba(13,13,13,1) 100%); 
+        width: 100%;
+      }
+
+      #vitrine-geral h2, #vitrine-geral-roupas h2, #vitrine-geral-crianca h2, #vitrine-geral-acessorios h2, #vitrine-geral-bebe h2,  #vitrine-geral-cosmeticos h2{
+        color: #e9e9e9;
+        font-size: 3em;
+        text-align: center;
+        margin-left: 10%;
+    
+        max-width: 80%;
+      
+  padding: 0% 0%;
+        padding-top: 3%;
+        
+        background-color: #138dff00;
+        border-radius: 0px;
+  font-family: Dealerplate;
+  border-width: 5px;
+border-color: linear-gradient(90deg, rgba(251,251,251,1) 0%, rgba(184,184,184,1) 50%, rgba(255,255,255,1) 100%);;
+border-style: solid;
+      
+      }
+
+
+      #tabela, #tabela-Roupas,#tabela-acessorios, #tabela-cosmeticos, #tabela-bebe, #tabela-crianca
+      {
+      margin-left: 5%;
+        width: 90%;
+        margin-top: 3%;
+        margin-bottom: 7%;
+        padding-bottom: 10%;
+      background-color: linear-gradient(0deg, rgba(48,48,48,1) 32%, rgb(87, 87, 87) 100%); ;
+      border-radius: 15px;
+      }
+      
+
+
+
+      #ctd {
+        padding-top: 10%;
+        padding-bottom: 10%;
+        width: 100%;
+        height: 50%;
+        display: flex;
+        background-color: rgb(212, 212, 212);
+      }
+      
+      #ctd img {
+        height: 30%;
+        width: 30%;
+        margin-left: 5%;
+       display: inline;
+      }
+
+      #div-ctd{
+        width: 2px; 
+        height: 140px; 
+        background-color: rgb(85, 85, 85); 
+        margin-top: 2%; 
+        
+        margin-left: 5%;
+      }
+   
+
+      #ctd p {
+        margin-top: 4%;
+        width: 50%;
+      
+       margin-left: 5%;
+       font-family: Dealerplate;
+       font-size: .9em;
+       letter-spacing: .05em;
+       text-align: justify;
+       color: rgb(41, 41, 41);
+       display: inline;
+      }
+      
+      
+      .item {
+        background-color: #1EAAFC;
+        background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        color: #ffffff;
+        border-radius: 4px;
+        border: 3px solid #171717;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      
+
+
+
+
+     
+
+
+
+
+      #detalhes-do-produto{
+        width: 100%;
+        height: 100%;
+        
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.692);
+        z-index: 10000000 ;
+      }
+      
+      #ctd-detalhes{
+        margin-left: 5%;
+        
+        margin-top: 55%;
+      width: 89%;
+        height: 30%;
+       
+        border-radius: 5px;
+      
+      padding: 1% 1%;
+        border-color: #ececec;
+        background-color:#ececec;
+      
+      }
+      
+      #carrousel-detalhes-produto{
+        width: 50%;
+       height: 100%;
+        float: left;
+        background-color: rgb(255, 255, 255);
+        
+        
+      }
+      #descricao-produto-detalhes{
+        width: 50%;
+      float: right;
+      height: 100%;
+      background-color: rgb(255, 255, 255);
+      overflow: auto;
+      }
+      
+      #btn-fechar-detalhes{
+        float: right;
+        margin-left: 34% ;
+        position:absolute; 
+        z-index: 99999999;
+      }
+      
+      
+      #btn-tamanhos{
+        font-size: .8em;
+        margin: 2% 1%;
+        font-weight: bold;
+      }
+
+      #aqui-vai-os-tamanhos{
+        width: 100%;
+      }
+
+      
+        #novidade-do-mês{
+          width: 100%;
+          background-color: #e3e9fa;
+          align-items: center;
+          padding: 5% 0%;
+          display: flex;
+        }
+        #texto-novidade{
+          width: 40%;
+          height: 20%;
+          margin: 0% 5%;
+
+        }
+
+        #texto-novidade p{
+        text-align: right;
+          font-size: 1.7em;
+
+          text-shadow: 1px 2px 0px rgba(0,0,0,0.2);
+          
+
+
+          font-weight: 900;
+          font-family: Dealerplate;
+          text-decoration: double;
+        }
+        #imagem-novidade{
+          width:45%;
+          display: inline-block;
+          
+        }
+        #novidade-do-mês img{
+        float: right;
+          width: 100%;
+          
+        }
+
+        #frase-novidade{
+          font-size: 1.3em; 
+          text-shadow: none; 
+          font-weight: 100; 
+          font-family: colorado;
+          float: right;
+        }
+
+        #frase-novidade:hover{
+          font-size: 1.3em; 
+          text-shadow: none; 
+          font-weight: 100; 
+          font-family: colorado;
+          float: right;
+          text-decoration-line: underline;
+        }
+
+        
+#button {
+  min-width: 70px;
+  min-height: 6px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 900;
+  color: #313133;
+  background: #4FD1C5;
+background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  overflow: hidden;
+  }
+
+
+  #button p {
+  margin: 0 auto;
+  font-size: .3em;
+    }
+
+#button::before {
+content: '';
+  border-radius: 1000px;
+
+  min-width: calc(100% + 20px);
+  min-height: calc(100% + 20px);;
+
+  border: 6px solid #00FFCB;
+  box-shadow: 0 0 60px rgba(0,255,203,.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+ 
+}
+
+#button:hover, #button:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+#button:hover::before, #button:focus::before {
+  opacity: 1;
+}
+
+#button::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid #00FFCB;
+  position: absolute;
+  z-index: -1;
+  
+  
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+  z-index: 99999999999999999;
+}
+
+#button:hover::after, #button:focus::after {
+  animation: none;
+  display: none;
+}
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 150px;
+    height: 150px;
+    opacity: 0;
+  }
+}
+
+
+}
+
+footer {
+
+}
+
+.text-uppercase {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+
+  margin-bottom: 2rem;
+}
+
+.text-white {
+  font-family: "Poppins", monospace;
+}
+
+.list-unstyled.mb-0, 
+.redes-sociais {
+  text-align: center;
+}
+
+.copy {
+  font-weight: 100;
+  opacity: .7;
+}
+
+
+/* Pagina Importação ==============*/
+
+#logo-nav {
+  width: 42px;
+}
+
+/* Titulos ======================*/
+
+.titulo-claro {
+  color: #e9e9e9;
+  font-size: 5em;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 50%;
+  margin-top: 5%;
+
+  margin-bottom: 5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background-color: #138dff00;
+  border-radius: 2px;
+  font-family: Dealerplate;
+  border-width: 5px;
+  border-color: linear-gradient(90deg, rgba(251,251,251,1) 0%, rgba(184,184,184,1) 50%, rgba(255,255,255,1) 100%);;
+  border-style: solid;
+}
+
+.titulo-escuro {
+  color: #000; 
+  font-size: 5em;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 50%;
+  margin-top: 5%;
+
+  margin-bottom: 5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background-color: #e9e9e9;
+  border-radius: 2px;
+  font-family: Dealerplate;
+  border-width: 5px;
+  border-color: linear-gradient(90deg, rgba(3,3,3,1) 0%, rgba(20,20,20,1) 50%, rgba(0,0,0,1) 100%);
+  border-style: solid;
+}
+
+
+
+.comoComprar-wrapper {
+  width: 100%;
+  height: 100%;
+
+  padding-bottom: 5%;
+}
+
+.demonstracao {
+  display: flex;
+  justify-content: center;
+}
+
+.demonstracao img{
+  margin: 2%;
+}
+
+.lojas-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: #e9e9e9;
+
+  padding-top: 1rem;
+}
+
+.calculadora-wrapper {
+  padding-bottom: 5rem;
+}
+
+.calculadora {
+  font-family: "poppins", sans-serif;
+
+  width: min(90vw, 700px);
+
+  background: #e9e9e9;
+
+  margin: 0 auto;
+  padding: 2rem;
+
+  text-align: center;
+
+  border-radius: 0.25rem;
+}
+
+.calculadora h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+
+  margin-bottom: 1rem;
+}
+
+.calculadora p {
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+
+.calculadora span {
+  margin-top: 1rem;
+
+  font-weight: 100;
+  font-size: 1.2rem;
+}
+
+.form-calc {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-calc {
+  font-size: 1.5rem;
+  padding: 1rem;
+
+  border: none;
+  border-radius: 0.25rem;
+
+  margin-bottom: 1rem;
+}
+
+.button-calc {
+  color: #000;
+
+  margin: 0 auto;
+  margin-bottom: 1rem;
+
+  padding: 1rem;
+
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  border: #000 solid 3px;
+  border-radius: 0.25rem;
+
+  background: #e9e9e9;
+
+  transition: 0.5s;
+}
+
+.button-calc:hover {
+  color: #e9e9e9;
+
+  border: #e9e9e9 solid 2px;
+
+  background: #000;
+}
+
+
+
+.media .video {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.player {
+  width: 100%;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  height: 0;
+  position: relative;
+}
+
+.player .player_controls {
+  z-index: 9999;
+  position: absolute;
+  bottom: 0;
+  padding: 4px;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  -webkit-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  -ms-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+  opacity: 0;
+}
+
+.player:hover .player_controls {
+  opacity: 1;
+}
+
+.player .player_controls .player_play_pause,
+.player .player_controls .player_mute,
+.player .player_controls .player_full_screen {
+  flex-basis: 20px;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  border: none;
+  outline: none;
+  padding: 4px;
+}
+
+.player .player_controls .player_volume {
+  flex-basis: 20%;
+  outline: none;
+}
+
+.player .player_controls .player_progress_bar {
+  flex-basis: calc(100% - 20% - 84px);
+  outline: none;
+}
+
+.media h1 {
+  font-size: 2em;
+  text-align: center;
+  color: #333;
+  margin: 20px 0;
+}
+

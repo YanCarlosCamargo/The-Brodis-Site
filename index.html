@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="img/logo.jpg" type="image/png">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/scss.scss">
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+    @import url('https://fonts.googleapis.com/css2?family=Red+Rose&display=swap');
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap');
+  </style>
+
+  <title>The Brodis - Inicio</title>
+
+
+  <script type="text/javascript">
+
+
+    function MudarEstado(el) {
+      var container = document.getElementById('container-main');
+      var display = document.getElementById(el).style.display;
+      if (display == "none") {
+
+        document.getElementById(el).style.display = 'block';
+
+
+        container.style.animation = ('desaparecer 500ms linear');
+        document.getElementById('container-main').style.filter = 'opacity(0.1)';
+
+
+
+        document.getElementById('container-main').style.filter = 'opacity(0.1)';
+        document.getElementById('container-main').style.pointerEvents = ('none');
+        document.getElementById('container-main').style.pointerEvents = ('none');
+
+        document.getElementById(el).style.position = 'fixed';
+
+
+      } else
+
+        fechar(el);
+
+    }
+
+    function fechar(el) {
+      var container = document.getElementById('container-main');
+      var display = document.getElementById(el).style.display;
+
+
+      if (display == "block") {
+
+
+        document.getElementById(el).style.display = 'none';
+
+        container.style.animation = ('clarear 150ms linear');
+
+
+
+        document.getElementById('container-main').style.filter = 'opacity(1)';
+
+
+        document.getElementById('container-main').style.pointerEvents = ('all');
+      }
+
+    }
+
+
+
+
+
+  </script>
+
+
+
+</head>
+
+<body>
+
+
+  <div class="pop" id="pop" style="display: none;">
+    <div id="carrinho">
+
+      <button class="btn btn-primary" onclick="fechar('pop')" id="btnFechar" type="button"><svg width="1.5em"
+          height="1.5em" viewBox="0 0 16 16" class="bi bi-x" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z">
+          </path>
+        </svg></button>
+      <div id="titulo-carrinho">
+        <h1>Carrinho</h1>
+        <div id="legendas-carrinho">
+          <div id="legenda-nome-do-produto-carrinho"> Nome do Produto </div>
+
+          <div id="legenda-quantidade-do-produto-carrinho"> Quantidade </div>
+
+        </div>
+        <hr style="width: 80%; background-color: black; margin-left: 10%; margin-bottom: -0px;margin-TOP: 6px">
+      </div>
+
+      <div id="produtos-carrinho">
+
+
+        <!--
+        Aqui dentro o Java Script vai inserir todos os produtos, ou seja, 
+          tudo oque você escrever aqui será apagado e substituído pelos produtos.
+  
+  -->
+
+
+      </div>
+      <hr style="width: 50%;color: rgb(0, 0, 0); margin-left: 25%;  margin-TOP: -6px;">
+      <div id="resumo">
+
+      </div>
+    </div>
+    <!--FInal #Carrinho-->
+
+
+  </div>
+  <!--Final Pop-->
+
+
+
+  <div id="detalhes-do-produto" style="display: none;">
+    <!--Detalhes do Produto-->
+    <div id="ctd-detalhes">
+
+      <div id="carrousel-detalhes-produto">
+
+      </div>
+
+      <div id="descricao-produto-detalhes">
+
+      </div>
+      <button type="button" class="btn-close" id="btn-fechar-detalhes" onclick="  fechar('detalhes-do-produto');"
+        aria-label="Close"></button>
+
+    </div>
+    <!--CTD Detalhes-->
+  </div>
+  <!--Final Detalhes do Produto-->
+
+
+  <button id="botão-movel-carrinho" style="display: none;" onclick="MudarEstado('pop') ">
+
+  </button>
+  <div class="container-main" id="container-main">
+
+
+
+    <header>
+
+      <nav class="navbar  navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="img/logo.jpg" alt="Logo Da joja." class="rounded-circle">
+          </a>
+          <ul class="navbar-nav">
+            <li class="nav-item redes-sociais-insta">
+              <a class="nav-link active" href="https://www.instagram.com/thebrodis.shopper/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                  class="bi bi-instagram" viewBox="0 0 16 16">
+                  <path
+                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                </svg>
+              </a>
+            </li>
+
+            <li class="nav-item redes-sociais">
+              <div id="icone-carrinho-nav">
+                <a class="nav-link active" onclick="MudarEstado('pop')">
+                  <svg xmlns="http://www.w3.org/2000/svg"   width="30" height="30" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                  </svg>
+                  </a>
+
+              </div>
+
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+
+      <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1a1a1a;">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav justify-content-between" id="navegacao">
+              <li class="nav-item">
+
+                <a class="nav-link active selecionado" aria-current="page" id="1"
+                  onclick="mudarSelecao('1');trocarDiv('vitrine-geral')" href="">Home </a>
+                <div id="selecao-nav"></div>
+
+              </li>
+              <li class="nav-item" id="nav-item">
+                <a class="nav-link" id="2" href="#vitrine-geral-roupas"
+                  onclick="mudarSelecao('2');trocarDiv('vitrine-geral-roupas')">Roupas</a>
+                <div id="selecao-nav"></div>
+              </li>
+              <li class="nav-item" id="nav-item">
+                <a class="nav-link" id="3" href="#vitrine-geral-cosmeticos"
+                  onclick="mudarSelecao('3');trocarDiv('vitrine-geral-cosmeticos')">Cosméticos</a>
+                <div id="selecao-nav"></div>
+              </li>
+              <li class="nav-item" id="nav-item">
+                <a class="nav-link" id="4" href="#vitrine-geral-bebe"
+                  onclick="mudarSelecao('4');trocarDiv('vitrine-geral-bebe')">Bebês</a>
+                <div id="selecao-nav"></div>
+              </li>
+              <li class="nav-item" id="nav-item">
+                <a class="nav-link" key="5" id="5" href="#vitrine-geral-crianca"
+                  onclick="mudarSelecao('5');trocarDiv('vitrine-geral-crianca')">Crianças</a>
+                <div id="selecao-nav"></div>
+              </li>
+              <li class="nav-item" id="nav-item">
+                <a class="nav-link" key="6" id="6" href="#vitrine-geral-acessorios"
+                  onclick="mudarSelecao('6');trocarDiv('vitrine-geral-acessorios')">Acessorios</a>
+                <div id="selecao-nav"></div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Serviços
+                </a>
+                <div id="selecao-nav"></div>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="./importacao.html">Importação</a></li>
+                  <li><a class="dropdown-item" href="#">Exportação</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    </header>
+
+    <main id="main">
+
+      <section class="carousel" id="carousel-dinamico">
+                              <div id="carouselExampleIndicators" class="carousel slide " data-bs-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></li>
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"></li>
+          </ol>
+          <div class="carousel-inner ">
+            <div class="carousel-item active">
+              <img src="img/carousel1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="img/carousel2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="img/carousel3.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="img/carousel4.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="img/carousel5.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </a>
+        </div>
+        
+
+      </section>
+
+      <section class="cards">
+
+        <div class="container">
+          <a class="item sidebar" style=" text-decoration: none; color: white;" href="#vitrine-geral-roupas"
+            onclick="mudarSelecao('2');trocarDiv('vitrine-geral-roupas')"><div class="apresentacao">Roupas</div></a>
+          <a class="item content-1" style=" text-decoration: none; color: white;" href="#vitrine-geral-cosmeticos"
+            onclick="mudarSelecao('3');trocarDiv('vitrine-geral-cosmeticos')"><div class="apresentacao">Cosméticos</div></a>
+          <a class="item content-2" style=" text-decoration: none; color: white;" href="#vitrine-geral-bebe"
+            onclick="mudarSelecao('4');trocarDiv('vitrine-geral-bebe')"><div class="apresentacao">Bebês</div></a>
+          <a class="item content-3" style=" text-decoration: none; color: white;" href="#vitrine-geral-crianca"
+            onclick="mudarSelecao('5');trocarDiv('vitrine-geral-crianca')"><div class="apresentacao">Crianças</div></a>
+          <a class="item sidebar-2" style=" text-decoration: none; color: white;" href="#vitrine-geral-acessorios"
+            onclick="mudarSelecao('6');trocarDiv('vitrine-geral-acessorios')"><div class="apresentacao">Acessórios</div></a>
+        </div>
+
+      </section>
+<section id="conteudos-da-pagina">
+  <div id="ctd">
+
+    <img
+    src="https://instagram.fcgh24-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/106030851_117163946451100_2678442168720688909_n.jpg?_nc_ht=instagram.fcgh24-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=NAWUOzTmsiMAX_II5Nu&tp=1&oh=46764360f84639a8c62fa0d7b1ac156f&oe=602C7463">
+    
+    <div id="div-ctd"></div>
+    
+    <p>
+    <b>Importação</b> é nosso forte!
+    <br><br>Temos Representantes e Parceiros nos EUA a pronto atendimento. <br>Você escolhe seu produto, nós
+    pegamos ele para <b>você!</b>
+    </p>
+    
+    
+    </div>
+    
+    
+    <div id="novidade-do-mês"> 
+      <video id="player" playsinline controls data-poster="img/camisa.jpg">
+        <source src="videos/thebrodis.mp4" type="video/mp4" />
+        <source src="/path/to/video.webm" type="video/webm" />
+        <script src="https://cdn.plyr.io/3.6.4/plyr.js"></script>
+        <script>
+          const player = new Plyr('#player');
+        </script>
+
+      </video>
+    </div>
+    </section>
+
+
+
+      <div id="vitrine-geral" style="display:block">
+        <br>
+        <h2>Todos os Produtos</h2>
+
+        <!-- nesta linha é possivel definir quantos cards são exibidos na mesma linha, 
+                    quantas colunas e etc.-->
+        <div class="row row-cols-2 row-cols-md-4 g-4" id="tabela">
+
+
+
+        </div>
+      </div>
+
+
+      <div id="vitrine-geral-roupas" style="display:none">
+        <br>
+        <h2>Roupas</h2>
+
+        <!-- nesta linha é possivel definir quantos cards são exibidos na mesma linha, 
+                            quantas colunas e etc.-->
+        <div class="row row-cols-2 row-cols-md-4 g-4" id="tabela-Roupas">
+
+
+
+        </div>
+      </div>
+
+      <div id="vitrine-geral-acessorios" style="display:none">
+        <br>
+        <h2>Acessórios</h2>
+
+        <!-- nesta linha é possivel definir quantos cards são exibidos na mesma linha, 
+                                    quantas colunas e etc.-->
+        <div class="row row-cols-2 row-cols-md-4 g-4" id="tabela-acessorios">
+
+
+
+        </div>
+      </div>
+
+      <div id="vitrine-geral-crianca" style="display:none">
+        <br>
+        <h2>Criança </h2>
+
+        <!-- nesta linha é possivel definir quantos cards são exibidos na mesma linha, 
+                                            quantas colunas e etc.-->
+        <div class="row row-cols-2 row-cols-md-4 g-4" id="tabela-crianca">
+
+
+
+        </div>
+      </div>
+
+      <div id="vitrine-geral-bebe" style="display:none">
+        <br>
+        <h2>Bebê </h2><img src="img/bebe.png" width="150px" style="float:right" alt="">
+
+        <!-- nesta linha é possivel definir quantos cards são exibidos na mesma linha, 
+                                                    quantas colunas e etc.-->
+        <div class="row row-cols-2 row-cols-md-4 g-4" id="tabela-bebe">
+
+
+
+        </div>
+      </div>
+
+      <div id="vitrine-geral-cosmeticos" style="display:none">
+        <br>
+        <h2>Cosméticos</h2>
+
+        <!-- nesta linha é possivel definir quantos cards são exibidos na mesma linha, 
+                                                            quantas colunas e etc.-->
+        <div class="row row-cols-2 row-cols-md-4 g-4" id="tabela-cosmeticos">
+
+
+
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="bg-dark text-white text-center text-lg-start">
+      <!-- Grid container -->
+      <div class="container-footer p-4">
+        <!--Grid row-->
+        <div class="row d-flex justify-content-around">
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <h5 class="text-uppercase">The  Brodis | PERSONAL  SHOPPER</h5>
+    
+            <ul class="list-unstyled bio">
+              <li>•@andre_camargo3.0 & @mendesjujuuu.</li>
+              <li>•Personal Shopper.</li>
+              <li>•Envio suas compras feitas nos EUA ✈️</li>
+              <li>•Me chame no direct para mais informações.</li>
+            </ul>
+
+          </div>
+          <!--Grid column-->
+    
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase redes-sociais">Redes Sociais</h5>
+    
+            <ul class="list-unstyled mb-0 d-flex justify-content-around">
+              <li>
+                <a class="nav-link active" href="https://www.instagram.com/thebrodis.shopper/">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                    class="bi bi-instagram" viewBox="0 0 16 16">
+                    <path
+                      d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 2</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 3</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+    
+        </div>
+        <!--Grid row-->
+      </div>
+      <!-- Grid container -->
+    
+      <!-- Copyright -->
+      <div class="text-center p-3 copy" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2020 Copyright:
+        <a class="text-white" href="https://www.instagram.com/thebrodis.shopper/">TheBrodisShopper</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+
+
+
+
+
+  </div>
+  <script src="https://cdn.plyr.io/3.6.4/plyr.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
