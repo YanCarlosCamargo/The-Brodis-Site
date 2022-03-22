@@ -177,7 +177,7 @@ ProdutoCerto = (el) => {
 
 
 
-D = val.tamanhos.split(",");
+ D = val.tamanhos.split(",");
 
 
       var amostra  = document.getElementById('carrousel-detalhes-produto');
@@ -191,11 +191,11 @@ D = val.tamanhos.split(",");
       </ol>
       <div class="carousel-inner-produtos">
         <div class="carousel-item active" data-bs-interval="10000">
-          <img src="img/`+val.img+`" class="d-block w-100" alt="...">
+          <img src="img/`+val.img+`" class="d-block " alt="...">
           
         </div>
         <div class="carousel-item" data-bs-interval="2000">
-          <img src="img/branco.png" class="d-block w-100" alt="...">
+          <img src="img/branco.png" class="d-block h-50 w-100" alt="...">
           
         </div>
         <div class="carousel-item">
@@ -335,14 +335,9 @@ if(val.id == id){
 
 
 
-inicializarLoja = () => { console.log('o valor de SOma é '+soma);
-    console.log(' o valor de precoFinal é '+precoFinal);
+inicializarLoja = () => {
     var containerProdutos = document.getElementById('tabela');
     var containerProdutosRoupas = document.getElementById('tabela-Roupas');
-   
-  
-
-
     var containerCarrinho = document.getElementById('produtos-carrinho');
 
 
